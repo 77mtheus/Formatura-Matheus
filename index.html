@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050609">
+
+    <title>Matheus Santana Correia | Minha Formatura</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="invitation">
+
+        <div class="ambient ambient-blue"></div>
+        <div class="ambient ambient-gold"></div>
+
+        <header class="topbar">
+            <span class="guest-invitation">Você é meu convidado!</span>
+        </header>
+
+        <section class="hero">
+
+            <div class="hero-intro">
+
+                <span class="eyebrow">
+                    UM MOMENTO. UMA CONQUISTA. MINHA HISTÓRIA.
+                </span>
+
+                <div class="gold-line"></div>
+
+                <h1 class="hero-name">
+                    <span>MATHEUS</span>
+                    <span>SANTANA</span>
+                    <span>CORREIA</span>
+                </h1>
+
+                <div class="hero-subtitle">
+                    <span></span>
+                    <p>MINHA FORMATURA</p>
+                    <span></span>
+                </div>
+
+                <p class="intro-description">
+                    Depois de uma jornada de dedicação e aprendizado,
+                    chegou o momento de celebrar uma conquista especial.
+                </p>
+
+                <p class="intro-final">
+                    Minha história está apenas começando.
+                </p>
+
+                <div class="parents-thanks">
+                    <span>COM TODO MEU AMOR</span>
+                    <p>Obrigado, pai e mãe, por sempre me apoiarem.</p>
+                </div>
+
+            </div>
+
+            <div class="event-info">
+
+                <div class="info-item">
+                    <span class="section-label">DATA</span>
+
+                    <div class="date">
+                        <strong>19</strong>
+                        <div>
+                            <span>DE DEZEMBRO</span>
+                            <span>2026</span>
+                        </div>
+                    </div>
+
+                    <span class="info-detail">SÁBADO</span>
+                </div>
+
+                <div class="info-item">
+                    <span class="section-label">ABERTURA</span>
+
+                    <div class="time">
+                        20<span>:00</span>
+                    </div>
+
+                    <span class="info-detail">HORÁRIO DE BRASÍLIA</span>
+                </div>
+
+            </div>
+
+            <div class="location">
+
+                <div class="location-top">
+                    <span class="section-label">LOCAL DA CELEBRAÇÃO</span>
+                    <span class="location-index">LOCALIZAÇÃO</span>
+                </div>
+
+                <h2>Espaço Savana</h2>
+
+                <p class="address">
+                    Avenida Alpha Norte, 2200<br>
+                    Alphaville, Santana de Parnaíba<br>
+                    São Paulo — SP, CEP 06539-010
+                </p>
+
+                <a
+                    class="maps-button"
+                    href="https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+Savana%2C+Avenida+Alpha+Norte%2C+2200%2C+Alphaville%2C+Santana+de+Parna%C3%ADba%2C+SP%2C+06539-010"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <span class="map-icon">↗</span>
+                    VER LOCALIZAÇÃO NO GOOGLE MAPS
+                </a>
+
+            </div>
+
+            <div class="confirmation">
+
+                <div class="confirmation-text">
+                    <span class="section-label">UM CONVITE ESPECIAL</span>
+                    <h3>Quero você comigo<br>nesse momento.</h3>
+                </div>
+
+                <button class="confirm-button" id="openModal">
+                    CONFIRMAR PRESENÇA
+                    <span>↗</span>
+                </button>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <span>MATHEUS SANTANA CORREIA</span>
+            <i>·</i>
+            <span>FORMATURA</span>
+            <i>·</i>
+            <span>2026</span>
+
+            <a href="admin.html" class="admin-access">
+                Área administrativa
+            </a>
+        </footer>
+
+    </main>
+
+    <!-- CONFIRMAÇÃO -->
+
+    <div class="modal-overlay" id="modal">
+
+        <div class="modal">
+
+            <button class="close-modal" id="closeModal">×</button>
+
+            <span class="section-label">MATHEUS SANTANA CORREIA</span>
+
+            <h2>Será especial<br>ter você comigo.</h2>
+
+            <p>Preencha seus dados para confirmar sua presença.</p>
+
+            <form id="confirmationForm">
+
+                <label for="name">NOME COMPLETO</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Digite seu nome"
+                    required
+                >
+
+                <label for="phone">WHATSAPP</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="(00) 00000-0000"
+                    required
+                >
+
+                <button type="submit" class="submit-button">
+                    CONFIRMAR MINHA PRESENÇA →
+                </button>
+
+            </form>
+
+            <div class="success-message" id="successMessage">
+                <span>✦</span>
+                <h3>Presença confirmada!</h3>
+                <p>Obrigado por compartilhar esse momento comigo.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="module" src="js/script.js"></script>
+
+</body>
+</html>

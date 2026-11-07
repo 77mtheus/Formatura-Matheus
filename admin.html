@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo | Formatura</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+    <main class="container">
+        <header class="header">
+            <div>
+                <span class="eyebrow">ÁREA RESTRITA</span>
+                <h1>Painel administrativo</h1>
+                <p>Gerenciamento de confirmações da formatura.</p>
+            </div>
+            <button id="logoutButton" class="logout hidden">Sair</button>
+        </header>
+
+        <section id="loginSection" class="login-card">
+            <h2>Acesso administrativo</h2>
+            <form id="loginForm">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" required
+                    placeholder="Seu e-mail administrativo">
+
+                <label for="password">Senha</label>
+                <input type="password" id="password" required
+                    placeholder="Sua senha">
+
+                <button type="submit">ENTRAR NO PAINEL</button>
+                <p id="loginError" class="error"></p>
+            </form>
+        </section>
+
+        <section id="dashboard" class="hidden">
+            <div class="stats">
+                <div class="stat-card">
+                    <span>TOTAL DE CONFIRMADOS</span>
+                    <strong id="totalConfirmed">0</strong>
+                </div>
+            </div>
+
+            <div class="list-card">
+                <div class="list-header">
+                    <div>
+                        <h2>Convidados confirmados</h2>
+                        <p>Lista de presenças registradas.</p>
+                    </div>
+                    <button id="refreshButton" class="refresh">Atualizar</button>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>WhatsApp</th>
+                                <th>Data da confirmação</th>
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody id="guestList">
+                            <tr>
+                                <td colspan="4">Carregando...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p id="listStatus" class="status"></p>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="js/admin.js"></script>
+</body>
+</html>

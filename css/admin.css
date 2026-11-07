@@ -1,0 +1,224 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #08080d;
+    color: #f5f3fa;
+    font-family: Arial, sans-serif;
+    padding: 45px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.eyebrow {
+    color: #b99561;
+    font-size: 11px;
+    letter-spacing: 4px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 34px;
+    margin: 12px 0;
+}
+
+.header p, .list-header p {
+    color: #9995a5;
+    font-size: 14px;
+}
+
+.login-card, .stat-card, .list-card {
+    background: #111119;
+    border: 1px solid #292333;
+    border-radius: 14px;
+    padding: 28px;
+}
+
+.login-card {
+    max-width: 430px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 22px;
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    color: #c6c0d1;
+    margin: 17px 0 8px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    background: #090910;
+    border: 1px solid #393044;
+    border-radius: 7px;
+    color: white;
+    outline: none;
+}
+
+input:focus {
+    border-color: #8b5cf6;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+    padding: 13px 18px;
+    font-weight: bold;
+}
+
+.login-card button {
+    width: 100%;
+    margin-top: 22px;
+    background: #8b5cf6;
+    color: white;
+}
+
+.logout, .refresh {
+    background: #211b2d;
+    color: #d8c6ff;
+    border: 1px solid #49366a;
+}
+
+.stats {
+    margin-bottom: 22px;
+}
+
+.stat-card {
+    max-width: 280px;
+}
+
+.stat-card span {
+    color: #aaa2b8;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+.stat-card strong {
+    display: block;
+    color: #c4a2ff;
+    font-size: 42px;
+    margin-top: 12px;
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.list-header h2 {
+    margin-bottom: 7px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+th, td {
+    padding: 16px 12px;
+    text-align: left;
+    border-bottom: 1px solid #292333;
+    font-size: 13px;
+}
+
+th {
+    color: #b99561;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+td {
+    color: #dedbe5;
+}
+
+.delete-button {
+    background: #3a1820;
+    color: #ffb6bd;
+    padding: 9px 12px;
+}
+
+.error {
+    color: #ff8585;
+    font-size: 13px;
+    margin-top: 14px;
+}
+
+.status {
+    color: #aaa2b8;
+    font-size: 12px;
+    margin-top: 18px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 28px 14px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .login-card, .list-card {
+        padding: 19px;
+    }
+
+    .list-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+/* CENTRALIZAÇÃO DO LOGIN */
+#loginSection {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 40px);
+    max-width: 430px;
+}
+
+body:has(#loginSection:not(.hidden)) {
+    min-height: 100vh;
+    position: relative;
+}
+
+body:has(#loginSection:not(.hidden)) .header {
+    display: none;
+}
